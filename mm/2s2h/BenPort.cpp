@@ -265,6 +265,16 @@ OTRGlobals::OTRGlobals() {
     // the shared Gui's single menu slot still holds OOT's SohMenu. Build MM's menu now that the
     // ImGui context is current (widgets populate lazily via BenMenu::InitElement).
     if (usingExistingCtx) {
+    benFast3dWindow = std::dynamic_pointer_cast<Fast::Fast3dWindow>(
+        context->GetInstance()->GetWindow());
+
+    if (benFast3dWindow == nullptr) {
+        spdlog::error("ComboShip: failed to acquire shared Fast3dWindow for MM");
+    }
+
+    BenGui::ActivateMenu(); // ComboShip: no-op under COMBO_BUILD (comboui owns the menu)
+}
+    if (usingExistingCtx) {
         BenGui::ActivateMenu(); // ComboShip: no-op under COMBO_BUILD (comboui owns the menu)
     }
 #endif
@@ -365,7 +375,19 @@ void OTRGlobals::RunExtract(int argc, char* argv[]) {
     auto wnd = std::dynamic_pointer_cast<Fast::Fast3dWindow>(OTRGlobals::Instance->context->GetWindow());
     auto gui = wnd->GetGui();
 
-    bool shouldRegen = VerifyArchiveVersion(DetectArchiveVersion("mm.o2r", true));
+    ArchiveVersion mmArchiveVersion = DetectArchiveVersion("mm.o2r", true);
+
+spdlog::error(
+    "COMBOSHIP MM VERSION CHECK: archive={}.{}.{}, build={}.{}.{}",
+    mmArchiveVersion.major,
+    mmArchiveVersion.minor,
+    mmArchiveVersion.patch,
+    gBuildVersionMajor,
+    gBuildVersionMinor,
+    gBuildVersionPatch
+);
+
+bool shouldRegen = VerifyArchiveVersion(mmArchiveVersion);
 
     std::filesystem::path ownPath;
     std::vector<std::string> args;
@@ -648,8 +670,13 @@ void OTRGlobals::RunExtract(int argc, char* argv[]) {
             continue;
         }
         gui->StartDraw();
-        benFast3dWindow->StartFrame();
-        benFast3dWindow->RunGuiOnly();
+        if (benFast3dWindow == nullptr) {
+    spdlog::error("ComboShip: benFast3dWindow is null inside RunExtract");
+    return;
+}
+
+benFast3dWindow->StartFrame();
+benFast3dWindow->RunGuiOnly();
         if (extractionTask.has_value()) {
             auto status = extractionTask->wait_for(std::chrono::milliseconds(0));
             if (status == std::future_status::ready) {
