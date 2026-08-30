@@ -21,7 +21,10 @@ In this version we have
 - A majora's mask boss rush mode
 - The ally system (Un-finished but working) (Be scared but Enjoy)
 
+--Randomizers--
+
 The 3 randomizers are
+
 -Only Oot , -Only majora's and -The ComboShip 
 
 Click L button on the randomizer icons to change between the randomizers mode
