@@ -17,7 +17,7 @@ In this version we have
 - Adjusted items to the original Nei
 - Lots of graphic issue debugs that destabilized the game
 - The abilty to use crowd control the boss rush mode for Oot
-- 3 randomizer modes and 1 boxed package
+- 3 randomizer modes in 1 boxed package
 - A majora's mask boss rush mode
 - The ally system (Un-finished but working) (Be scared but Enjoy)
 
