@@ -23,9 +23,10 @@ In this version we have
 
 The 3 randomizers are
 -Only Oot , -Only majora's and -The ComboShip 
+
 Click L button on the randomizer icons to change between the randomizers mode
 
-Boss rush mode
+--Boss rush mode--
 
 -This shares the same L button swap on the boss rush icon, You can play against Ocarina or Majora's bosses
 
