@@ -1,12 +1,35 @@
-# ComboShip
+# DuoShip
 
-**ComboShip is a cross-game randomizer for [Ship of Harkinian](https://github.com/HarbourMasters/Shipwright) (Ocarina of Time) and [2 Ship 2 Harkinian](https://github.com/HarbourMasters/2ship2harkinian) (Majora's Mask).**
+**Duoship is a cross-game randomizer for 
+[Ship of Harkinian](https://github.com/HarbourMasters/Shipwright) (Ocarina of Time) 
+and
+[2 Ship 2 Harkinian](https://github.com/HarbourMasters/2ship2harkinian) (Majora's Mask).**
 
 **DISCLAIMER: THIS IS AN UNOFFICIAL PROJECT AND USES AI AS PART OF THE DEVELOPMENT. IT IS NOT CREATED OR HANDLED BY THE HARBOUR MASTERS TEAM. BRING ANY IDEAS, QUESTIONS, OR CONCERNS TO ME DIRECTLY!**
 
 ## What it is
 
-Like [OOTMM](https://ootmm.com/), ComboShip shuffles items across *both* games at once: a check in Ocarina of Time can hold a Majora's Mask item and vice-versa, and a single seed spans the two. Both games run together in one application; ComboShip builds that combined runtime on top of the existing Ship of Harkinian and 2 Ship 2 Harkinian ports.
+This is a update to the world of ship to find its way beneath the seas gaze
+
+In this version we have
+
+- 50+ added items to game 
+- Adjusted items to the original Nei
+- Lots of graphic issue debugs that destabilized the game
+- The abilty to use crowd control the boss rush mode for Oot
+- 3 randomizer modes and 1 boxed package
+- A majora's mask boss rush mode
+- The ally system (Un-finished but working) (Be scared but Enjoy)
+
+The 3 randomizers are
+-Only Oot , -Only majora's and -The ComboShip 
+Click L button on the randomizer icons to change between the randomizers mode
+
+Boss rush mode
+This shares the same L button swap on the boss rush icon
+You can play aganst Ocarina or Majora's bosses
+-Crowd control curently works for Oot being a version of Ship 
+-I will soon be adding a way to get it working the majora's mask side while using ship (i know how just got to do it and make a list of whats what) (I do not work for crowd control)
 
 ## Features
 
@@ -15,8 +38,9 @@ Like [OOTMM](https://ootmm.com/), ComboShip shuffles items across *both* games a
 
 ## Future plans
 
-- Possibly looking into some more OOTMM features, but it's not a priority yet.
-- Possible Archipelago support as well, ideally through the existing SoH implementation
+- Many this is going to be an evolving project to bring zelda Oot and majoras back to its proper place.
+- making this happen >>> Possible Archipelago support as well, ideally through the existing SoH implementation
+- Maybe another mode
 
 ## Any bugs?
 
@@ -24,35 +48,27 @@ Probably many! Create an issue if you find any.
 
 ## Building
 
-ComboShip currently builds on **Windows** only. macOS and Linux support will return later.
+for this to work you would have to have your own copy of Oot .o2r, Oot-mq .o2r is not required.
 
-### Prerequisites
+For the majora's mask side .o2r you must have a valid copy majora's mask 1.0 and use the extractor in the game window to extract it.
 
-- Windows 10/11 (x64)
-- Visual Studio 2022 (MSVC, with C++20 / C23 support)
-- CMake 3.26 or newer
+the game should load up correctly, 
+if not if not bring me a issue request and i will get back to you on it. 
 
-### Configure and build
+There is currently no source file i will get to working on updating my files for a dedicated source folder I don't like gatekeeping
 
-From the `Combo/` directory, configure once to generate the Visual Studio solution:
+### Requirements
+The o2r files. 
+-oot.o2r
+-oot-mq.o2r (not a requirment)
+-majora's mask 1.0
 
-```powershell
-cmake -B build/x64 -A x64
-```
-
-Helper scripts in `scripts/` wrap `cmake --build` and default to a Debug build (pass `--Release` for Release):
-
-```powershell
-./scripts/build-comboship.ps1  ->  ComboShip.exe
-```
+-Ram depends on how much stress you put on the game.
+-The knowledge of knowing that this is not running of N64 hardware anymore.
 
 ## Packaging
 
-`cpack` produces a single Windows ZIP bundling the full runtime (`ComboShip.exe`, the engine and UI DLLs, both ports, and assets):
-
-```powershell
-cpack
-```
+None
 
 ## Contributing
 
@@ -69,10 +85,13 @@ ComboShip combines two separately-licensed projects; each retains its own licens
 
 ## Special Thanks 
 
-https://github.com/skijer for making the wonderful NEI programing and remodeling of the games structure 
+https://github.com/skijer 
+For making the wonderful NEI programing and remodeling of the games structure. 
 
-https://github.com/Varuuna for merging to 2 games into one on the ship system and thier struggle to wire the combo randomizers code. (i know that had to suck)
+https://github.com/Varuuna 
+For merging to 2 games into one on the ship system and thier struggle to wire the combo randomizers code. (i know that had to suck)
 
 and
 
-https://github.com/HarbourMasters/Shipwright because this team here is golden, they brought us the ship to sail on for many years to come for all kinds of zelda fans regardless of how you play the game.
+https://github.com/HarbourMasters/Shipwright
+Because this team here is golden, they brought us the ship to sail on for many years to come for all kinds of zelda fans regardless of how you play the game.
