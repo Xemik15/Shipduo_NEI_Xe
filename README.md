@@ -91,7 +91,7 @@ None
 
 ## Contributing
 
-DuoShip is built on 4 upstream projects, kept as vendored copies under.-------------------------. 
+DuoShip is built on 4 upstream projects, kept as vendored copies under.-------------------------------. 
 `soh/` and `mm/ and `combo/` and `nei/`:
 
 - Ship of Harkinian — https://github.com/HarbourMasters/Shipwright
