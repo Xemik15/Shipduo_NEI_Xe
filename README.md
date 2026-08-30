@@ -39,33 +39,37 @@ Click L button on the randomizer icons to change between the randomizers mode
 
 ## Features
 
-- Anything within Ship and 2Ship is here. When those projects gets new updates, they are not far from inclusion here.
-- 
-- Online Multiplayer through Anchor. And yes it works cross-game as well. Work together in OOT and MM, split or together.
+- Anything within Ship and 2Ship is here.
+  
+- Online Multiplayer through Anchor.
+  
+- And yes it works cross-game as well. Work together in OOT and MM, split or together.
 
 ## Future plans
 
 - Many this is going to be an evolving project to bring zelda Oot and majoras back to its proper place.
   
-- making this happen >>> Possible Archipelago support as well, ideally through the existing SoH implementation
+- Making this happen >>> Possible Archipelago support as well, ideally through the existing SoH implementation
   
-- Maybe another mode
+- Maybe another game mode mode
 
 ## Any bugs?
 
-Probably many! Create an issue if you find any.
+Probably many some known and getting fixed! Create an issue if you find any.
 
 ## Building
-getting it to run is simple 
+
+Getting it to run is simple 
 
 -For this to work you would have to have your own copy of Oot .o2r, Oot-mq .o2r is not required.
 
 -For the majora's mask side .o2r you must have a valid copy majora's mask 1.0 and use the extractor in the game window to extract it.
 
 -The game should load up correctly, 
-if not if not bring me a issue request and i will get back to you on it. 
 
-There is currently no source file i will get to working on updating my files for a dedicated source folder I don't like gatekeeping
+(if not if not bring me a issue request and i will get back to you on it.)
+
+There is currently no source file i will get to working on updating my files for a dedicated source folder (I don't like gatekeeping)
 
 ### Requirements
 
@@ -78,6 +82,7 @@ The o2r files.
  ## System Requirements
  
 -Ram depends on how much stress you put on the game.
+
 -The knowledge of knowing that this is not running of N64 hardware anymore.
 
 ## Packaging
@@ -86,12 +91,17 @@ None
 
 ## Contributing
 
-ComboShip is built on two upstream projects, kept as vendored copies under `soh/` and `mm/`:
+DuoShip is built on 4 upstream projects, kept as vendored copies under&
+`soh/` and `mm/ and `combo/` and `nei/`:
 
 - Ship of Harkinian — https://github.com/HarbourMasters/Shipwright
+- 
 - 2 Ship 2 Harkinian — https://github.com/HarbourMasters/2ship2harkinian
+- 
+- ComboShip — https://github.com/Varuuna/ComboShip
+- 
+- skijer's Nei — https://github.com/skijer/Shipwright/pull/1
 
-ComboShip-specific code lives in `combo/`, and changes to the vendored ports are kept minimal and guarded behind `COMBO_BUILD`. See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the design and [`docs/UPSTREAM_MERGES.md`](docs/UPSTREAM_MERGES.md) for how upstream changes are merged in.
 
 ## License
 
