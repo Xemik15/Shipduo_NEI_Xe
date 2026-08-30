@@ -66,3 +66,10 @@ ComboShip-specific code lives in `combo/`, and changes to the vendored ports are
 ## License
 
 ComboShip combines two separately-licensed projects; each retains its own license. See the `soh/` and `mm/` directories for details.
+
+## Special Thanks 
+
+https://github.com/skijer for making the wonderful NEI programing and remodeling of the games structure 
+https://github.com/Varuuna for merging to 2 games into one on the ship system and thier struggle to wire the combo randomizers code. (i know that had to suck)
+and
+https://github.com/HarbourMasters/Shipwright because this team here is golden, they brought us the ship to sail on for many years to come for all kinds of zelda fans regardless of how you play the game.
